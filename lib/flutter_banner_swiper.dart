@@ -29,13 +29,11 @@ class _BannerSwiperState extends State<BannerSwiper> {
   @override
   void didUpdateWidget(BannerSwiper oldWidget) {
     super.didUpdateWidget(oldWidget);
-    print("--------------------didUpdateWidget");
   }
 
   @override
   void deactivate() {
     super.deactivate();
-    print("--------------------deactivate");
   }
 
   @override
@@ -44,7 +42,6 @@ class _BannerSwiperState extends State<BannerSwiper> {
     if (_timer != null) {
       _timer.cancel();
     }
-    print("--------------------dispose");
   }
 
   PageController _pageController = null;
@@ -58,8 +55,6 @@ class _BannerSwiperState extends State<BannerSwiper> {
     }
 
     _timer = Timer.periodic(Duration(seconds: 5), (_) {
-      print(
-          "----------------------------------_currentIndex   ${_currentIndex}");
       _pageController.animateToPage(_currentIndex + 1,
           duration: Duration(milliseconds: 400), curve: Curves.easeOut);
     });
@@ -127,10 +122,8 @@ class _BannerSwiperState extends State<BannerSwiper> {
 //        setState(() {
         _currentIndex = index;
         if(indicatorKey.currentState!=null){
-          print("rrrrrrrrrrrrrrrrrrrrrrrrr  ccccc  ");
           indicatorKey.currentState.updateWidgets(widget.length,(_currentIndex) % widget.length);
         }else{
-          print("rrrrrrrrrrrrrrrrrrrrrrrrr  rrrrrr  ");
         }
 //        squareIndicator.createState().setState((){});
 //        });
