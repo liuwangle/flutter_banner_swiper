@@ -1,9 +1,8 @@
 name: flutter_banner_swiper
 description: A  banner swiper package. banner swiper    use  the libray PageView  swrap  form the new widget.
-version: 0.1.3
-Repository (GitHub): https://github.com/liuwangle/flutter_banner_swiper
+version: 0.1.4
 author: liu wangle<liuwangle1789@gmail.com>
-homepage: https://github.com/liuwangle
+homepage: https://github.com/liuwangle/flutter_banner_swiper
 
 
 environment:
