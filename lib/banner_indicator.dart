@@ -1,57 +1,63 @@
-
 import 'package:flutter/material.dart';
-class  SquareIndicator extends StatefulWidget{
+
+class SquareIndicator extends StatefulWidget {
   int length;
   int select;
-  Widget selectorWidget;
-  Widget normalWidget;
-  SquareIndicator({Key key,this.length,this.select,this.selectorWidget,this.normalWidget}): super(key: key);
+  final Widget selectorWidget;
+  final Widget normalWidget;
+
+  SquareIndicator(
+      {Key key,
+      this.length,
+      this.select,
+      this.selectorWidget,
+      this.normalWidget})
+      : super(key: key);
   MSquareIndicator mSquareIndicator;
+
   @override
   State<StatefulWidget> createState() {
-    if(mSquareIndicator==null){
-      mSquareIndicator=MSquareIndicator();
+    if (mSquareIndicator == null) {
+      mSquareIndicator = MSquareIndicator();
     }
     return mSquareIndicator;
   }
-
 }
-class MSquareIndicator extends State<SquareIndicator>{
-  List<Widget> points(){
-    List<Widget> list=null;
-    for(var i=0;i<widget.length;i++){
 
-      if(list==null){
-        list=new List();
+class MSquareIndicator extends State<SquareIndicator> {
+  List<Widget> points() {
+    List<Widget> list ;
+    for (var i = 0; i < widget.length; i++) {
+      if (list == null) {
+        list = new List();
       }
       list.add(_getWidget(i));
-
     }
-    if(list==null){
-      list=new List();
+    if (list == null) {
+      list = new List();
       list.add(Container());
     }
     return list;
   }
 
-  Widget  _getWidget(int i){
+  Widget _getWidget(int i) {
     int index = widget.select;
 
     if (index == i) {
-      if(widget.selectorWidget!=null){
+      if (widget.selectorWidget != null) {
         return widget.selectorWidget;
       }
-     return Container(
+      return Container(
         margin: EdgeInsets.only(left: 4, right: 4),
         width: 10,
         height: 4,
         color: Color.fromARGB(255, 153, 153, 153),
       );
-    }else{
-      if(widget.normalWidget!=null){
+    } else {
+      if (widget.normalWidget != null) {
         return widget.normalWidget;
       }
-     return Container(
+      return Container(
         margin: EdgeInsets.only(left: 4, right: 4),
         width: 10,
         height: 4,
@@ -60,23 +66,18 @@ class MSquareIndicator extends State<SquareIndicator>{
     }
   }
 
-
-
   @override
   Widget build(BuildContext context) {
-
-    return  Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children:points(),);
+      children: points(),
+    );
   }
 
-  updateWidgets(int length,int select){
-    widget.length=length;
-    widget.select=select;
-    setState(() {
-
-    });
+  updateWidgets(int length, int select) {
+    widget.length = length;
+    widget.select = select;
+    setState(() {});
   }
-
 }

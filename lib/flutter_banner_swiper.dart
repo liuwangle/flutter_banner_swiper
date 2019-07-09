@@ -8,16 +8,16 @@ import 'package:flutter_banner_swiper/banner_indicator.dart';
 typedef GetWidgetCallback = Widget Function(int index);
 
 class BannerSwiper extends StatefulWidget {
-  int length = 0;
-  GetWidgetCallback getwidget;
-  int width;
-  int height;
-  Widget selectorWidget;
-  Widget normalWidget;
-  bool autoLoop;
-  bool showIndicator;
-  bool spaceMode;
-  BannerSwiper({Key key, this.length = 0, this.getwidget,@required this.width,@required this.height,this.selectorWidget,this.normalWidget,this.autoLoop=true,this.showIndicator=true,this.spaceMode=true});
+  final int length  ;
+  final GetWidgetCallback getwidget;
+  final int width;
+  final int height;
+  final Widget selectorWidget;
+  final  Widget normalWidget;
+  final bool autoLoop;
+  final bool showIndicator;
+  final bool spaceMode;
+  BannerSwiper({Key key, this.length, this.getwidget,@required this.width,@required this.height,this.selectorWidget,this.normalWidget,this.autoLoop=true,this.showIndicator=true,this.spaceMode=true});
 
   @override
   State<StatefulWidget> createState() {

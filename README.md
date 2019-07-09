@@ -1,11 +1,11 @@
 # flutter_banner_swiper
 
-A refresh loadmore listview package.
+A banner swiper  package.
 
 ## Getting Started
 Installing
  ```dart
-flutter_banner_swiper: ^0.7
+flutter_banner_swiper: ^0.1.1
 ```
 
 Import
