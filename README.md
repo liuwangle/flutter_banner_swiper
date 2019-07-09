@@ -5,7 +5,7 @@ A banner swiper  package.
 ## Getting Started
 Installing
  ```dart
-flutter_banner_swiper: ^0.1.1
+flutter_banner_swiper: ^0.1.3
 ```
 
 Import
